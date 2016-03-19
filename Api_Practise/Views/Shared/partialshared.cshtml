@@ -1,0 +1,33 @@
+﻿
+
+@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    {
+
+        @Html.AntiForgeryToken()
+
+
+
+
+        <div class="container">
+            <div class="navbar-header">
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="navbar"> @HttpContext.Current.User.Identity.GetUserName()</li>
+                        <li class="navbar">@Html.ActionLink("Sign Out", "Logout", "FootballersMVC") </li>
+
+                    </ul>
+                </div>
+                </div>
+            </div>
+
+                }
+                }
+                else
+                {
+
+                <li class="pull-right">@Html.ActionLink("Sign In", "SignIn", "FootballersMVC")</li>
+                <li class="pull-right">@Html.ActionLink("Register Footballers", "Create", "FootballersMVC")</li>
+
+                }
